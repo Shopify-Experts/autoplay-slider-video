@@ -1,0 +1,44 @@
+{% comment %}
+HTML5/MP4 Autoplay video slider for Shopify.
+Works in iphone too.
+
+Steps1: Upload video to Shopify files and add the url in the section.
+
+Powered by: http://expertsinshopify.com/
+
+{% endcomment %}
+
+<video  width="100%" video="100%" style="width:100%, height:100%" playsinline="playsinline" muted="muted" preload="yes" autoplay="autoplay" loop="loop" id="vjs_video_739_html5_api" class="video-js" data-setup='{"autoplay":"any"}'>
+    		<source src="{{ section.settings.video_url }}" type="video/mp4">
+      </video>
+
+{% schema %}
+  {
+    "name": "Video BG Slider",
+    "settings": [
+{
+        "type": "text",
+        "id": "video_url",
+        "label": "Background video link",
+        "default": "https://cdn.shopify.com/s/files/1/0451/1377/0141/files/uniform_web_1.mp4?v=1597050823",
+        "info": "Supports only Shopify link.[Learn more](http://expertsinshopify.com/)"
+      }
+]
+ ,
+    "presets": [{
+      "name": "Video BG Slider",
+      "category": "Video"
+    }]
+  }
+{% endschema %}
+
+{% stylesheet %}
+ 
+
+{% endstylesheet %}
+
+{% javascript %}
+  
+ 
+                               
+{% endjavascript %}
